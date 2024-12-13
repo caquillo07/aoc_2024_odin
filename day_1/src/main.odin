@@ -7,7 +7,7 @@ import "core:strings"
 import "core:strconv"
 import "core:slice"
 
-read_input :: proc(file_name: string) -> ([dynamic]int, [dynamic]int) {
+read_input :: proc(file_name: string) -> (leftNumbers: [dynamic]int, rightNumbers: [dynamic]int) {
 	fileData, err := os.read_entire_file_or_err(file_name)
 	if err != nil {
 		fmt.panicf("failed to open file: %v", err)
@@ -19,8 +19,8 @@ read_input :: proc(file_name: string) -> ([dynamic]int, [dynamic]int) {
 
 	delete(fileData)
 
-	leftNumbers := make([dynamic]int, 0, len(lines))
-	rightNumbers := make([dynamic]int, 0, len(lines))
+	leftNumbers = make([dynamic]int, 0, len(lines))
+	rightNumbers = make([dynamic]int, 0, len(lines))
 	for line in lines {
 		defer free_all(context.temp_allocator)
 		parts, err := strings.split(line, "   ", context.temp_allocator)

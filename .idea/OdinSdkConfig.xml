@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.lasagnerd.odin.settings.OdinSdkConfigPersistentState">
+    <option name="sdkPath" value="$USER_HOME$/.asdf/installs/odin/dev-2024-12/bin" />
+    <option name="extraBuildFlags" value="-debug" />
+    <option name="semanticAnnotatorEnabled" value="true" />
+    <option name="odinCheckerEnabled" value="true" />
+    <option name="debuggerId" value="lldb-bundled" />
+    <option name="highlightUnknownReferencesEnabled" value="false" />
+  </component>
+</project>
